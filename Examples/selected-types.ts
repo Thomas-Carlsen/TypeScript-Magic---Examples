@@ -28,6 +28,7 @@ interface stringConstants {
 }
 
 type tt = SelectedXrmQuery<stringConstants, 'stringA' | 'stringB'> // and they don't even look optional - nani? but a simple Partial would do the trick
+                                                                   // oh, ma bad, -? should make it NOT undefined :D hihi
 type tt2 = Pick<stringConstants, 'stringA' | 'stringB'>
 
 const ob = {} as tt;
